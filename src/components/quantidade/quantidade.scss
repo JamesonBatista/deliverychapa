@@ -1,0 +1,17 @@
+quantidade {
+    float: right;
+    button {
+        width: 25px;
+        height: 25px !important;
+    }
+    button[color=light] {
+        float: left;
+    }
+    span.numero {
+        float: left;
+        margin-top: 9px;
+        width: 30px;
+        text-align: center;
+    }
+
+}

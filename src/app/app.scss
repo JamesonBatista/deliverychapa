@@ -1,0 +1,109 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+ion-content.backImage {
+    background: url(../assets/imagens/fundo.jpg);
+    background-size: cover;
+}
+
+.backImage .scroll-content {
+    background: rgba(189, 8, 28, 0.6);
+}
+
+.list-transparent .item {
+    background: transparent !important;
+}
+.list.list-transparent  .item-input:last-child {
+    border-bottom: none !important;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+}
+.logo span {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+ }
+.logo img {
+    width: 120px;
+}
+.topo {
+    position: fixed;
+    width: 100%;
+    background: red;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255,0,0,1) 0%, rgba(139,0,0,1) 100%);
+}
+.titulo {
+    position: relative;
+    color: white;
+}
+.titulo p {
+    float: left;
+    font-size: 2rem;
+    margin: 0px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.produtos {
+    margin-top: 60px;
+}
+.produtos .produto {
+   width: 80%;
+   background: white;
+   display: block;
+   position: relative;
+   margin: 0 auto;
+   margin-bottom: 15px;
+   border: 1px solid #E2DDDD;
+   box-shadow: 3px 3px 4px rgba(0,0,0, 0.2);
+   padding: 10px;
+   overflow: auto;        
+}
+.produtos .produto .titulo {
+   color: red;
+   font-size: 1.6rem;
+   margin-bottom: 4px;
+}
+.produtos .produto .descricao {
+   height: 50px;
+}
+.produtos .imagem {
+   float: left;
+   border: 1px solid #E2DDDD;
+   width: 79px;
+   height: 100px;
+   margin-right: 10px;
+   border-radius: 10px;
+   background-size: cover;
+   background-position: 50% 50%;
+}
+.produtos .produto .preco span {
+   font-weight: bold;
+   font-size: 1.3rem;
+}
+.produtos .produto .preco {
+   font-size: 2rem;
+}
