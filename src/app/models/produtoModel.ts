@@ -5,4 +5,9 @@ export class ProdutoModel {
     preco: number;
     foto: string;
     categoriaId: any;
+    comentario: string;
+    payComents: any;
+    formPay: any;
+    nomeUser:any;
+
 }

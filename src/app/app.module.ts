@@ -18,6 +18,7 @@ import { CategoriaProvider } from '../providers/categoria/categoria';
 import { CameraProvider } from '../providers/camera/camera';
 import { ProdutoProvider } from '../providers/produto/produto';
 import { CarrinhoProvider } from '../providers/carrinho/carrinho';
+import { PedidoProvider } from '../providers/pedido/pedido';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { CarrinhoProvider } from '../providers/carrinho/carrinho';
     Network,
     ProdutoProvider,
     CarrinhoProvider,
+    PedidoProvider,
   ]
 })
 export class AppModule { }

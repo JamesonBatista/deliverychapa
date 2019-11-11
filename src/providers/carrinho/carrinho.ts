@@ -7,6 +7,7 @@ import { CarrinhoModel } from '../../app/models/carrinhoModel';
 import { Events } from 'ionic-angular';
 import { ConfigHelper } from '../../app/helpers/configHelper';
 import { HttpResultModel } from '../../app/models/HttpResultModel';
+import { UsuarioModel } from '../../app/models/usuarioModel';
 
 @Injectable()
 export class CarrinhoProvider {
@@ -14,10 +15,13 @@ export class CarrinhoProvider {
   private _carrinho: CarrinhoModel = new CarrinhoModel();
   private carrinho: Observable<CarrinhoModel>;
   private carrinhoObservable: any;
+  prodNome;
+  prodQnt;
 
   constructor(
     public http: HttpProvider,
-    public evt: Events) {
+    public evt: Events,
+    ) {
 
     //Inicializando nosso carrinho
     this._carrinho.datahora = new Date();
@@ -91,29 +95,44 @@ export class CarrinhoProvider {
     });
   }
 
-  public SalvarPedido(pedido: CarrinhoModel): Promise<HttpResultModel> {
+  public async SalvarPedido(pedido: CarrinhoModel): Promise<HttpResultModel> {
+    let comentario = localStorage.getItem(ConfigHelper.storageKeys.comentarioItem)
+    let pagamento = localStorage.getItem(ConfigHelper.storageKeys.payForm);
+    let comentPagameto = localStorage.getItem(ConfigHelper.storageKeys.comentsPay);
+    let nomeUser = localStorage.getItem(ConfigHelper.storageName.userName)
 
     let _pedido: any = {};
-    _pedido.valorTotal = pedido.valorTotal;
     _pedido.itens = [];
 
     pedido.itens.forEach(prod => {
       _pedido.itens.push({
-        quantidade: prod.Quantidade,
-        produtoId: prod.Produto._id
+        qnt: prod.Quantidade,
+        pedido: prod.Produto.nome,
       })
+      this.prodNome = prod.Produto.nome
+      this.prodQnt = prod.Quantidade
     });
+    _pedido.valorTotal = pedido.valorTotal;
+    _pedido.comentario = comentario;
+    _pedido.nomeUser = nomeUser;
+    _pedido.formaPagamento = pagamento;
+    _pedido.produtos = this.prodNome;
+    _pedido.quantidade = this.prodQnt;
+    _pedido.comentarioPagamento = comentPagameto;
+    console.log(_pedido)
+
 
     _pedido.itens = JSON.stringify(_pedido.itens);
-    this._carrinho.itens.splice(_pedido, 1);
+    this._carrinho.itens.splice(_pedido);
 
-    return this.http.post(`${ConfigHelper.Url}/pedido`, _pedido);
+    return this.http.post(`${ConfigHelper.Url}pedido`, _pedido);
+
+
   }
 
   public GetMeusPedidos(): Promise<HttpResultModel> {
     return this.http.get(`${ConfigHelper.Url}pedido`);
   }
-
 
 
 }

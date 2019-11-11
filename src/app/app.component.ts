@@ -12,6 +12,7 @@ import { ConfigHelper } from './helpers/configHelper';
 export class MyApp {
   rootPage: any = UsuarioProvider.IsLogado ? 'CategoriaPage' : 'LoginPage';
 
+
   constructor(
     private platform: Platform,
     private oneSignal: OneSignal,
@@ -51,7 +52,6 @@ export class MyApp {
       this.oneSignal.endInit();
 
     }
-    
   }
 
 }

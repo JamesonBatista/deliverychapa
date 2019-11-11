@@ -9,7 +9,14 @@ export class ConfigHelper {
         token: 'nofood.token',
         user: 'nofood.user',
         selectCategory: 'nofood.select.category',
-        oneSignalUid: 'nofood.onesignal'
+        oneSignalUid: 'nofood.onesignal',
+        comentarioItem: 'nofood.comentario',
+
+        payForm: 'nofood.de.Pagamento',
+        comentsPay: 'nofood.Pagamento',
+    }
+    public static storageName = {
+      userName: 'nofood.do.Usuario',
     }
 
     public static Events = {

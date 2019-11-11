@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="voltar()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Visualizar Pedido</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list >
+  <ion-item >
+    <h2>{{pedido.nomeUser}}</h2>
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>Produto</h2>
+    <p>{{pedido.itens}}</p>
+  </ion-item>
+</ion-list>
+</ion-content>

@@ -6,4 +6,5 @@ export class UsuarioModel {
     senhaConfirmacao: string;
     foto: string;
     telefone: string;
+    adress: string;
 }

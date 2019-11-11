@@ -42,7 +42,7 @@ export class HttpProvider {
           .subscribe(_res => {
             this.spinnerSrv.Hide();
             resolve({ success: true, data: _res, err: undefined });
-          //  console.log('HTTP: ',_res)
+           console.log('HTTP: ',_res)
           }, err => {
             this.spinnerSrv.Hide();
             this.alertSrv.toast('Não foi possível consultar os dados, verifique sua conexão e tente novamente', 'bottom');
@@ -65,6 +65,7 @@ export class HttpProvider {
           .subscribe(_res => {
             this.spinnerSrv.Hide();
             resolve({ success: true, data: _res, err: undefined });
+            console.log(_res)
           }, err => {
             this.spinnerSrv.Hide();
             console.log(err);

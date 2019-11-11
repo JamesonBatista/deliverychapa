@@ -41,7 +41,6 @@ export class ProdutosPage {
       let produtosResult = await this.produtoSrv.produtosByCategoriaId(this.categoriaSelecionada._id);
       if (produtosResult.success)
         this.produtos = <Array<ProdutoModel>>produtosResult.data;
-      console.log(produtosResult)
     } catch (error) {
       console.log('problema ao carregar os produtos', error);
     }

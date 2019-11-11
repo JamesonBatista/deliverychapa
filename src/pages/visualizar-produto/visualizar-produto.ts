@@ -3,6 +3,8 @@ import { AlertProvider } from './../../providers/alert/alert';
 import { ProdutoModel } from './../../app/models/produtoModel';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { CarrinhoModel } from '../../app/models/carrinhoModel';
+import { ConfigHelper } from '../../app/helpers/configHelper';
 
 @IonicPage()
 @Component({
@@ -12,6 +14,8 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 export class VisualizarProdutoPage {
 
   produto: ProdutoModel = new ProdutoModel();
+  carrinho: CarrinhoModel = new CarrinhoModel();
+coments: string;
 
   constructor(
     public navCtrl: NavController,
@@ -33,7 +37,14 @@ export class VisualizarProdutoPage {
   adicionarNoCarrinho() {
     this.alertSrv.toast('Produto adicionado ao carrinho com sucesso!', 'bottom');
     this.carrinhoSrv.adicionarNovoItem(this.produto);
+
+this.comentario();
     this.ViewCtrl.dismiss();
+  }
+  public comentario(){
+    this.coments = this.produto.comentario;
+  localStorage.setItem(ConfigHelper.storageKeys.comentarioItem, this.coments)
+
   }
 
 }

@@ -7,6 +7,15 @@
   <div class="valor">
     <h2>{{ carrinho.valorTotal | real }}</h2>
     <small>seu pedido atual</small>
+  <ion-list >
+      <ion-item no-lines *ngFor="let pay of payCash; let i=index ">
+        <ion-label>{{pay.val}}</ion-label>
+        <ion-checkbox [(ngModel)]="pay.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-item no-lines>
+    <ion-input type="text" [(ngModel)]="produtos.payComents" placeholder="Adicione informações de pagamento" ></ion-input>
+  </ion-item>
   </div>
   <div class="botao-finalizar">
     <div class="botao" tappable (click)="finalizarPedido()">
@@ -17,7 +26,8 @@
     <div class="produto" *ngFor="let item of carrinho.itens" tappable>
       <div class="imagem" [ngStyle]="{'background-image': 'url(' + item.Produto.foto + ')'}"></div>
       <div class="titulo">{{item.Produto.nome}}</div>
-      <div class="descricao">{{item.Produto.descricao}}</div>
+      <div    class="descricao">{{item.Produto.descricao}}</div>
+      <div class="comentario">{{item.Produto.comentario}}</div>
       <div class="preco">{{item.Produto.preco | real}}</div>
       <div class="quantidade">
         <quantidade [produto]="item.Produto"  (quantidadeAlterada)="quantidadeAlterada(item.Produto, $event)"></quantidade>

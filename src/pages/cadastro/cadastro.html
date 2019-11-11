@@ -5,16 +5,22 @@
   </div>
   <ion-list no-lines class="list-transparent">
     <ion-item>
-      <ion-input [(ngModel)]="usuario.nome" type="text" placeholder="Nome"></ion-input>
+      <ion-input [(ngModel)]="usuario.nome" type="text" placeholder="Nome: "></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="usuario.email" type="text" placeholder="E-mail"></ion-input>
+      <ion-input [(ngModel)]="usuario.email" type="text" placeholder="E-mail: "></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="usuario.senha" type="password" placeholder="Senha"></ion-input>
+      <ion-input [(ngModel)]="usuario.telefone" type="number" placeholder="Telefone: "></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="usuario.senhaConfirmacao" type="password" placeholder="Confirmação da Senha"></ion-input>
+      <ion-input [(ngModel)]="usuario.adress" type="text" placeholder="Endereço Completo:"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.senha" type="password" placeholder="Senha: "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.senhaConfirmacao" type="password" placeholder="Confirmação da Senha: "></ion-input>
     </ion-item>
   </ion-list>
   <ion-grid>

@@ -71,7 +71,7 @@ ion-content.backImage {
     margin-top: 60px;
 }
 .produtos .produto {
-   width: 80%;
+   width: 95%;
    background: white;
    display: block;
    position: relative;
@@ -80,7 +80,7 @@ ion-content.backImage {
    border: 1px solid #E2DDDD;
    box-shadow: 3px 3px 4px rgba(0,0,0, 0.2);
    padding: 10px;
-   overflow: auto;        
+   overflow: auto;
 }
 .produtos .produto .titulo {
    color: red;
@@ -89,6 +89,7 @@ ion-content.backImage {
 }
 .produtos .produto .descricao {
    height: 50px;
+   font-style: italic;
 }
 .produtos .imagem {
    float: left;
@@ -106,4 +107,6 @@ ion-content.backImage {
 }
 .produtos .produto .preco {
    font-size: 2rem;
+   margin-top: 10px;
+   font-weight: bold;
 }

@@ -6,9 +6,10 @@
   </div>
   <div class="formulario">
 
-    <input type="text" placeholder="Nome" [(ngModel)]="usuarioLogado.nome">
+    <input  type="text" placeholder="Nome" [(ngModel)]="usuarioLogado.nome">
     <input type="text" placeholder="Email" [(ngModel)]="usuarioLogado.email">
     <input type="number" placeholder="Telefone" [(ngModel)]="usuarioLogado.telefone">
+    <input type="text" placeholder="Digite seu Endereço completo" [(ngModel)]="usuarioLogado.adress">
 
     <div class="botao">
       <button ion-button outline color="primary" round block (click)="salvar()">
