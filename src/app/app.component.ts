@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal, OSDisplayType } from '@ionic-native/onesignal';
 import { ConfigHelper } from './helpers/configHelper';
+import { HttpProvider } from '../providers/http/http';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,8 @@ export class MyApp {
     private platform: Platform,
     private oneSignal: OneSignal,
     statusBar: StatusBar,
-    splashScreen: SplashScreen) {
+    splashScreen: SplashScreen,
+    private http: HttpProvider) {
 
     platform.ready().then(() => {
       statusBar.styleDefault();

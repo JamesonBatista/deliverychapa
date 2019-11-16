@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { PedidoProvider } from '../../providers/pedido/pedido';
-import { ProdutoModel } from '../../app/models/produtoModel';
 import { PedidosModel } from '../../app/models/pedidosModel';
 
 
@@ -12,25 +11,37 @@ import { PedidosModel } from '../../app/models/pedidosModel';
 })
 export class PedidosPage {
 
-pedido: PedidosModel = new PedidosModel();
+pedido: Array<PedidosModel> = new Array<PedidosModel>();
 
 lista;
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
      private pedidosSrv: PedidoProvider,
-     private ModalCtrl: ModalController,) {
+     private ModalCtrl: ModalController,
+     private ViewCtrl: ViewController,) {
 
   }
 
-ionViewWillEnter(){
- this.pedidosSrv.pedidosGetAll().then(data=>{
-   this.lista = (data.data);
-   console.log(data.data)
- })
+  ionViewWillEnter(){
+   this.load();
+  }
+
+async load(): Promise<void>{
+try {
+  let pedidosresult = await this.pedidosSrv.getOrder();
+  if(pedidosresult.success){
+this.pedido = <Array<PedidosModel>>pedidosresult.data;
+  }
+} catch (error) {
+  console.log('Erro ao carregar todos os Pedidos: ', error)
+}
 }
 visualizarPedidos(item: PedidosModel){
-  let modal = this.ModalCtrl.create('VisualizarPedidoPage', { prod: item });
+  let modal = this.ModalCtrl.create('VisualizarPedidoPage', { product: item });
   modal.present();
 }
+  voltar() {
+    this.ViewCtrl.dismiss();
+  }
 }

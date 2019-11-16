@@ -31,6 +31,7 @@ export class CarrinhoPage {
     private alertSrv: AlertProvider,
 
 ) {
+  this.get();
     this.payCash = [{ val: 'Débito', isChecked: false },
                     { val: 'Crédito', isChecked: false },
                     { val: 'Dinheiro', isChecked: false },]
@@ -84,6 +85,9 @@ localStorage.setItem(ConfigHelper.storageKeys.payForm, JSON.stringify(this.isChe
     this.coment =this.produtos.payComents
     localStorage.setItem(ConfigHelper.storageKeys.comentsPay, JSON.stringify(this.coment))
 
+  }
+  get(){
+    console.log()
   }
 
 }

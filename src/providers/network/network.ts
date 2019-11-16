@@ -17,6 +17,7 @@ export class NetworkProvider {
         return (navigator.connection.type != Connection.UNKKONW && navigator.connection.type != Connection.NONE);
       }
       else
+
         return true;
     } else {
       return navigator.onLine;

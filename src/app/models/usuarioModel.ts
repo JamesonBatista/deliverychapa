@@ -7,4 +7,6 @@ export class UsuarioModel {
     foto: string;
     telefone: string;
     adress: string;
+    bairr: string;
+    city: string;
 }

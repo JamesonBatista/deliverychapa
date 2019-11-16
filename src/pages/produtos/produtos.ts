@@ -45,7 +45,6 @@ export class ProdutosPage {
       console.log('problema ao carregar os produtos', error);
     }
   }
-
   quantidadeAlterada(produto: ProdutoModel, evt: any): void {
     if (evt.acao == AcaoCarrinhoEnum.Adicionar)
       this.carrinhoSrv.adicionarNovoItem(produto);

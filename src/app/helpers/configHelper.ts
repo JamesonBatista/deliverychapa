@@ -11,12 +11,13 @@ export class ConfigHelper {
         selectCategory: 'nofood.select.category',
         oneSignalUid: 'nofood.onesignal',
         comentarioItem: 'nofood.comentario',
-
+        pedidos: 'nofood.pedidos',
         payForm: 'nofood.de.Pagamento',
         comentsPay: 'nofood.Pagamento',
     }
     public static storageName = {
       userName: 'nofood.do.Usuario',
+      id: 'nofood.userId',
     }
 
     public static Events = {

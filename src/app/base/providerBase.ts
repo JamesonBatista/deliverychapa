@@ -12,6 +12,9 @@ export abstract class ProviderBase<T> {
     get(): Promise<HttpResultModel> {
         return this.http.get(this.url);
     }
+  getOrder(): Promise<HttpResultModel> {
+    return this.http.getOrder(this.url);
+  }
 
     getByUid(uid: string): Promise<HttpResultModel> {
         return this.http.get(`${this.url}/${uid}`);

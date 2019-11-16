@@ -4,14 +4,19 @@
   </ion-navbar>
 </ion-header>
 <ion-content no-padding>
-  <ion-card *ngFor="let item of lista ">
-    <ion-card-header icon-left text-wrap  >
+<div class="card">
+  <ion-card *ngFor="let item of pedido ">
+    <ion-card-header icon-left text-wrap>
       <ion-icon name="cart"></ion-icon>
-     Realizado em {{ item.dataPedido | date:'dd/MM/yyyy HH:mm'  }}
+      Realizado em {{ item.dataPedido | date:'dd/MM/yyyy HH:mm'  }}
     </ion-card-header>
     <ion-card-content>
-      <p>O valor total da compra foi: <strong> {{ item.valorTotal | real }}</strong> <ion-icon name="cash"></ion-icon></p>
+      <p>O valor total da compra foi: <strong> {{ item.valorTotal | real }}</strong>
+        <ion-icon name="cash"></ion-icon>
+      </p>
     </ion-card-content>
   </ion-card>
+</div>
+
 </ion-content>
 <tab [pagina]="'Meus Pedidos'"></tab>

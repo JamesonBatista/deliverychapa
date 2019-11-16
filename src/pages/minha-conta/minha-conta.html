@@ -4,12 +4,12 @@
   <div class="imagem" [ngStyle]="{'background-image': 'url(' + usuarioLogado.foto + ')'}" (click)="mudarFoto()">
 
   </div>
-  <div class="formulario">
+  <div class="formulario" text-wrap>
 
-    <input  type="text" placeholder="Nome" [(ngModel)]="usuarioLogado.nome">
-    <input type="text" placeholder="Email" [(ngModel)]="usuarioLogado.email">
-    <input type="number" placeholder="Telefone" [(ngModel)]="usuarioLogado.telefone">
-    <input type="text" placeholder="Digite seu Endereço completo" [(ngModel)]="usuarioLogado.adress">
+    <input  type="text" placeholder="Nome: " [(ngModel)]="usuarioLogado.nome">
+    <input type="number" placeholder="Telefone: " [(ngModel)]="usuarioLogado.telefone">
+    <input  type="text" placeholder="Cidade: " [(ngModel)]="usuarioLogado.city">
+    <input type="text" placeholder=" Endereço: " [(ngModel)]="usuarioLogado.adress" text-wrap>
 
     <div class="botao">
       <button ion-button outline color="primary" round block (click)="salvar()">

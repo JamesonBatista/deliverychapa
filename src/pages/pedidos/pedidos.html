@@ -1,12 +1,12 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Lista de Pedidos</ion-title>
+    <ion-title>Lista Pedido</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 <div class="produtos">
-  <div class="produto" *ngFor="let item of lista">
+  <div class="produto" *ngFor="let item of pedido">
     <div tappable (click)="visualizarPedidos(item)">
       <div class="titulo">{{item.nomeUser}}</div>
       <div class="descricao">{{item.dataPedido | date: 'dd/MM/yyyy HH:mm'}}</div>

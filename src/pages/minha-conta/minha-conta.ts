@@ -61,11 +61,12 @@ export class MinhaContaPage {
 
   async LoadData(): Promise<void> {
     try {
-      console.log(this.usuarioLogado.adress)
       let user = <UsuarioModel>JSON.parse(localStorage.getItem(ConfigHelper.storageKeys.user))
       let userResult = await this.usuarioSrv.getByUid(user._id);
       if (userResult.success) {
         this.usuarioLogado = <UsuarioModel>userResult.data;
+      console.log(this.usuarioLogado)
+
         if (!this.usuarioLogado.foto)
           this.usuarioLogado.foto = ConfigHelper.photo;
       }

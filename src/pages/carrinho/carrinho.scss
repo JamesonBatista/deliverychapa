@@ -4,8 +4,8 @@ page-carrinho {
         background: #F8F8F8 !important;
     }
 
-    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before,
-    .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    .header::after, .tabs[tabsPlacement="top"] > .tabbar::after, .footer::before,
+    .tabs[tabsPlacement="bottom"] > .tabbar::before {
         background-image: none !important;
     }
 
@@ -76,13 +76,22 @@ ion-row.row {
 input.text-input.text-input {
     font-size: 1.3rem;
 }
-.list-md {
+.list {
     margin: -87px -15px 24px;
         margin-left: -50px;
 }
 .checkbox-icon {
     left: 33px;
 }
+// page-carrinho .list .formpay {
+
+// }
+// ion-list.formpay.list.list {
+//    margin: -0px -15px 24px;
+//     margin-left: -50px;
+//     background-color: transparent !important;
+//     z-index: -1;
+// }
 
 
 

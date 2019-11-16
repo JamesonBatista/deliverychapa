@@ -7,7 +7,6 @@ import { CarrinhoModel } from '../../app/models/carrinhoModel';
 import { Events } from 'ionic-angular';
 import { ConfigHelper } from '../../app/helpers/configHelper';
 import { HttpResultModel } from '../../app/models/HttpResultModel';
-import { UsuarioModel } from '../../app/models/usuarioModel';
 
 @Injectable()
 export class CarrinhoProvider {
@@ -96,7 +95,6 @@ export class CarrinhoProvider {
   }
 
   public async SalvarPedido(pedido: CarrinhoModel): Promise<HttpResultModel> {
-    let comentario = localStorage.getItem(ConfigHelper.storageKeys.comentarioItem)
     let pagamento = localStorage.getItem(ConfigHelper.storageKeys.payForm);
     let comentPagameto = localStorage.getItem(ConfigHelper.storageKeys.comentsPay);
     let nomeUser = localStorage.getItem(ConfigHelper.storageName.userName)
@@ -104,22 +102,23 @@ export class CarrinhoProvider {
     let _pedido: any = {};
     _pedido.itens = [];
 
+
     pedido.itens.forEach(prod => {
       _pedido.itens.push({
-        qnt: prod.Quantidade,
-        pedido: prod.Produto.nome,
+         Pedido: prod.Produto.nome,
+        Qnt: prod.Quantidade,
+        Comentario: prod.Produto.comentario,
+
       })
       this.prodNome = prod.Produto.nome
       this.prodQnt = prod.Quantidade
     });
     _pedido.valorTotal = pedido.valorTotal;
-    _pedido.comentario = comentario;
     _pedido.nomeUser = nomeUser;
     _pedido.formaPagamento = pagamento;
     _pedido.produtos = this.prodNome;
     _pedido.quantidade = this.prodQnt;
     _pedido.comentarioPagamento = comentPagameto;
-    console.log(_pedido)
 
 
     _pedido.itens = JSON.stringify(_pedido.itens);

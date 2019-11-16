@@ -19,6 +19,7 @@ import { CameraProvider } from '../providers/camera/camera';
 import { ProdutoProvider } from '../providers/produto/produto';
 import { CarrinhoProvider } from '../providers/carrinho/carrinho';
 import { PedidoProvider } from '../providers/pedido/pedido';
+import {OrderModule} from 'ngx-order-pipe'
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { PedidoProvider } from '../providers/pedido/pedido';
     ProdutoProvider,
     CarrinhoProvider,
     PedidoProvider,
+    OrderModule,
   ]
 })
 export class AppModule { }

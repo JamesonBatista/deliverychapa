@@ -35,6 +35,7 @@
     "cordova-plugin-network-information": "2.0.2",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "ngx-order-pipe": "^2.0.4",
     "onesignal-cordova-plugin": "2.7.0",
     "rxjs": "6.2.1",
     "rxjs-compat": "^6.5.3",

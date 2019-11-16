@@ -10,13 +10,43 @@
 </ion-header>
 
 <ion-content padding>
-<ion-list >
+<ion-list class="pedido">
   <ion-item >
     <h2>{{pedido.nomeUser}}</h2>
+    <h2>{{usuarioLogado.telefone}}</h2>
+
   </ion-item>
   <ion-item text-wrap>
     <h2>Produto</h2>
     <p>{{pedido.itens}}</p>
   </ion-item>
+  <ion-item text-wrap>
+    <h2>Pagamento</h2>
+    <p>{{pedido.formaPagamento}}</p>
+    <p>Comentario: {{pedido.comentarioPagamento}}</p>
+
+  </ion-item>
+  <ion-item text-wrap>
+    <h2>Endereço</h2>
+    <p>{{usuarioLogado.city}}</p>
+    <p>{{usuarioLogado.bairr}}</p>
+    <p>{{usuarioLogado.adress}}</p>
+
+  </ion-item>
 </ion-list>
+<div >
+  <button ion-button class="accpet"  round block (click)="acceptOrder()">
+    Aceitar Pedido
+  </button>
+</div>
+<div >
+  <button ion-button  class="env" round block (click)="sendOrder()">
+   Enviar Pedido
+  </button>
+</div>
+<div >
+  <button ion-button  class="cancel" round block (click)="cancelOrder()">
+    Cancelar Pedido
+  </button>
+</div>
 </ion-content>

@@ -14,13 +14,20 @@
       <ion-input [(ngModel)]="usuario.telefone" type="number" placeholder="Telefone: "></ion-input>
     </ion-item>
     <ion-item>
+      <ion-input [(ngModel)]="usuario.city" type="text" placeholder="Qual sua Cidade: "></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.bairr" type="text" placeholder="Qual seu Bairro: "></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-input [(ngModel)]="usuario.adress" type="text" placeholder="Endereço Completo:"></ion-input>
     </ion-item>
     <ion-item>
       <ion-input [(ngModel)]="usuario.senha" type="password" placeholder="Senha: "></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input [(ngModel)]="usuario.senhaConfirmacao" type="password" placeholder="Confirmação da Senha: "></ion-input>
+      <ion-input [(ngModel)]="usuario.senhaConfirmacao" type="password" placeholder="Confirmação da Senha: ">
+      </ion-input>
     </ion-item>
   </ion-list>
   <ion-grid>

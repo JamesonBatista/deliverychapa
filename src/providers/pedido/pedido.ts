@@ -3,19 +3,16 @@ import { ConfigHelper } from '../../app/helpers/configHelper';
 import { HttpProvider } from '../http/http';
 import { HttpResultModel } from '../../app/models/HttpResultModel';
 import { ProviderBase } from '../../app/base/providerBase';
-import { ProdutoModel } from '../../app/models/produtoModel';
+import { PedidosModel } from '../../app/models/pedidosModel';
 
 
 @Injectable()
-export class PedidoProvider extends ProviderBase<ProdutoModel> {
+export class PedidoProvider extends ProviderBase<PedidosModel> {
 
-  url: string = `${ConfigHelper.Url}/pedido`;
 
   constructor(public http: HttpProvider) {
     super(`${ConfigHelper.Url}/pedido`, http);
   }
 
-  async pedidosGetAll(): Promise<HttpResultModel> {
-    return this.http.get(`${this.url}`);
-  }
+
 }

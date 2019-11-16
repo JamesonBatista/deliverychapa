@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { CarrinhoModel } from '../../app/models/carrinhoModel';
 import { ConfigHelper } from '../../app/helpers/configHelper';
+import { CarrinhoItemModel } from '../../app/models/CarrinhoItemModel';
 
 @IonicPage()
 @Component({
@@ -15,14 +16,14 @@ export class VisualizarProdutoPage {
 
   produto: ProdutoModel = new ProdutoModel();
   carrinho: CarrinhoModel = new CarrinhoModel();
-coments: string;
-
+itensCarrinho: CarrinhoItemModel = new CarrinhoItemModel();
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public ViewCtrl: ViewController,
     private alertSrv: AlertProvider,
     private carrinhoSrv: CarrinhoProvider) {
+      this.comentario();
 
   }
 
@@ -42,9 +43,6 @@ this.comentario();
     this.ViewCtrl.dismiss();
   }
   public comentario(){
-    this.coments = this.produto.comentario;
-  localStorage.setItem(ConfigHelper.storageKeys.comentarioItem, this.coments)
-
+    this.produto.comentario;
   }
-
 }

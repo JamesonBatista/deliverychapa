@@ -46,5 +46,23 @@ page-categoria {
         margin: 0px;
         margin-bottom: 20px;
     }
+   .item {
+    padding-left: 16px;
+    padding-right: 0;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    background-color: transparent;
+
+}
+.item-inner {
+    border-bottom: none !important;
+}
+.aviso {
+    text-align: center;
+    margin-top: 100px;
+}
 
 }
