@@ -4,7 +4,8 @@ const variables = {
     },
     Database: {
         connection: process.env.connection || 'mongodb+srv://adm:123123nofood@nofoodapp-baqew.mongodb.net/test?retryWrites=true&w=majority'
-    },
+    }
+    ,
     Security: {
         secretyKey: 'd41d8cd98f00b204e9800998ecf8427e|7aef61337bcee2fe773aa78b40afacbc'
     }

@@ -29,7 +29,9 @@ class usuarioRepository {
                 email: data.email,
                 foto: data.foto,
                 telefone: data.telefone,
-                endereco: data.adress
+                endereco: data.adress,
+                Bairro: data.bairr,
+                Cidade: data.city
             });
         return this._base._model.findById(usuarioAtualizado._id, this._projection)
     }
@@ -39,7 +41,7 @@ class usuarioRepository {
     }
 
     async getById(id) {
-        return await this._base._model.findById(id, 'nome email _id foto telefone adress');
+        return await this._base._model.findById(id, 'nome email _id foto telefone adress bairr city');
     }
 
     async delete(id) {

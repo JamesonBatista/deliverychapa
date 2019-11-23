@@ -77,12 +77,4 @@ exports.delete = async (repository, req, res) => {
         res.status(500).send({ message: 'Erro no processamento', error: err });
     }
 };
-exports.getPedidos = async (repository, req, res) => {
-    try {
-        let data = await repository.getAll();
-        res.status(200).send(data);
-    } catch (error) {
-        console.log('get com error, motivo: ', err);
-        res.status(500).send({ message: 'Erro no processamento', error: err });
-    }
-};
+
