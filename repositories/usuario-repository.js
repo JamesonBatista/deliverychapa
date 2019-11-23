@@ -31,7 +31,8 @@ class usuarioRepository {
                 telefone: data.telefone,
                 endereco: data.adress,
                 Bairro: data.bairr,
-                Cidade: data.city
+                Cidade: data.city,
+                onesignalId: data.onesignalId
             });
         return this._base._model.findById(usuarioAtualizado._id, this._projection)
     }
@@ -41,7 +42,7 @@ class usuarioRepository {
     }
 
     async getById(id) {
-        return await this._base._model.findById(id, 'nome email _id foto telefone adress bairr city');
+        return await this._base._model.findById(id, 'nome email _id foto telefone adress bairr city onesignalId');
     }
 
     async delete(id) {

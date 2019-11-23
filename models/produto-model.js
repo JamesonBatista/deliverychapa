@@ -14,6 +14,8 @@ const produtoModel = new schema({
     dataCriacao: { type: Date, default: Date.now },
     produtos: { type: String, trim: true },
     quantidade: { type: String, trim: true },
+    onesignalId: { type: String, trim: true },
+
 
     
 }, { versionKey: false });

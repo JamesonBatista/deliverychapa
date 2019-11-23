@@ -8,12 +8,15 @@ const pedidoModel = new schema({
     valorTotal: { type: Number, required: true, default: 0 },
     itens: { type: String, required: true },
     comentario: { type: String, trim: true },
+    onesignalId: { type: String, trim: true },
+
     formaPagamento: { type: String, trim: true},
     comentarioPagamento: {type: String, trim: true},
     dataPedido: { type: Date, default: Date.now },
     nomeUser: { type: String, trim: true },
     produtos: { type: String, trim: true },
     quantidade: { type: String, trim: true },
+    
 });
 
 pedidoModel.pre('save', next => {
