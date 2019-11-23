@@ -27,8 +27,10 @@ pedidoController.prototype.post = async (req, res) => {
 
 pedidoController.prototype.get = async (req, res) => {
     let result = await _repo.getAll(req.usuarioLogado.user._id);
-   console.log(result)
-
+    res.status(200).send(result);
+};
+pedidoController.prototype.getPedidos = async (req, res) => {
+    let result = await _repo.getAll();
     res.status(200).send(result);
 };
 

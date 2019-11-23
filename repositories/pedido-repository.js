@@ -15,10 +15,13 @@ class pedidoRepository {
         return await this._base.update(id, data);
     }
 
-    async getAll() {
+    async getAll(_usuarioId ) {
+        return await this._base._model.find({ usuarioId: _usuarioId });
+    }
+    async getPedidos(){
         return await this._base._model.find();
     }
-    
+
     async getById(id) {
         return await this._base.getById(id);
     }
@@ -26,7 +29,6 @@ class pedidoRepository {
     async delete(id) {
         return await this._base.delete(id);
     }
-
 
 }
 
