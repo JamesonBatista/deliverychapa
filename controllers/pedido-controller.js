@@ -17,6 +17,8 @@ pedidoController.prototype.post = async (req, res) => {
     _validationContract.isRequired(req.body.nomeUser, 'O nome do Usuario é obrigatório');
     _validationContract.isRequired(req.body.produtos, 'Informe o produto');
     _validationContract.isRequired(req.body.quantidade, 'Informe a quantidade');
+    _validationContract.isRequired(req.body.onesignalId, 'O oneSignal é obrigatório');
+
 
 
 
