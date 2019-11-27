@@ -9,7 +9,6 @@ const pedidoModel = new schema({
     itens: { type: String, required: true },
     comentario: { type: String, trim: true },
     onesignalId: { type: String, trim: true },
-
     formaPagamento: { type: String, trim: true},
     comentarioPagamento: {type: String, trim: true},
     dataPedido: { type: Date, default: Date.now },

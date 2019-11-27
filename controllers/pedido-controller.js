@@ -17,7 +17,7 @@ pedidoController.prototype.post = async (req, res) => {
     _validationContract.isRequired(req.body.nomeUser, 'O nome do Usuario é obrigatório');
     _validationContract.isRequired(req.body.produtos, 'Informe o produto');
     _validationContract.isRequired(req.body.quantidade, 'Informe a quantidade');
-    _validationContract.isRequired(req.body.onesignalId, 'O oneSignal é obrigatório');
+    _validationContract.isTrue(req.body.onesignalId, 'O oneSignal é obrigatório');
 
 
 
@@ -36,6 +36,9 @@ pedidoController.prototype.get = async (req, res) => {
 
 pedidoController.prototype.getById = async (req, res) => {
     ctrlBase.getById(_repo, req, res);
+};
+pedidoController.prototype.delete = async (req, res) => {
+    ctrlBase.delete(_repo, req, res);
 };
 
 module.exports = pedidoController;
