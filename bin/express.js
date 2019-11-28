@@ -8,6 +8,8 @@ const categoriaRouter = require('../routes/catergoria-router');
 const produtoRouter = require('../routes/produto-router');
 const usuarioRouter = require('../routes/usuario-router');
 const pedidoRouter = require('../routes/pedido-router');
+const pedidoRouterUser = require('../routes/pedido-router-user');
+
 
 //Criando/Invocando a Api/Server Web do Express
 const app = express();
@@ -24,6 +26,8 @@ app.use('/api/categoria', categoriaRouter);
 app.use('/api/produto', produtoRouter);
 app.use('/api/usuario', usuarioRouter);
 app.use('/api/pedido', pedidoRouter);
+app.use('/api/pedidoUser', pedidoRouterUser);
+
 
 
 //Exportando nossa Api
