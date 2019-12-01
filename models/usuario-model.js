@@ -7,8 +7,6 @@ const usuarioModel = new schema({
     nome: { type: String, required: true, trim: true, index: true },
     adress: { type: String, required: true, trim: true},
     city: { type: String, required: true, trim: true},
-    onesignalId: { type: String, trim: true },
-
     bairr: { type: String, required: true, trim: true},
     email: { type: String, required: true },
     telefone: { type: String, required: false },

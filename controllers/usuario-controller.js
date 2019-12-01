@@ -51,7 +51,6 @@ usuarioController.prototype.put = async (req, res) => {
     _validationContract.isRequired(req.body.adress, 'Informe seu Endereço completo!');
     _validationContract.isRequired(req.body.bairr, 'Informe seu Bairro!');
     _validationContract.isRequired(req.body.city, 'Informe sua Cidade!');
-    _validationContract.isRequired(req.body.onesignalId, 'OneSignal não existente!');
 
 
 
