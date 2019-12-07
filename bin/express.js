@@ -9,6 +9,8 @@ const produtoRouter = require('../routes/produto-router');
 const usuarioRouter = require('../routes/usuario-router');
 const pedidoRouter = require('../routes/pedido-router');
 const pedidoRouterUser = require('../routes/pedido-router-user');
+const utilRouter = require('../routes/util-router');
+
 
 
 //Criando/Invocando a Api/Server Web do Express
@@ -27,6 +29,8 @@ app.use('/api/produto', produtoRouter);
 app.use('/api/usuario', usuarioRouter);
 app.use('/api/pedido', pedidoRouter);
 app.use('/api/pedidoUser', pedidoRouterUser);
+app.use('/api/util', utilRouter);
+
 
 
 
