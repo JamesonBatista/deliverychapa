@@ -10,6 +10,7 @@ const usuarioRouter = require('../routes/usuario-router');
 const pedidoRouter = require('../routes/pedido-router');
 const pedidoRouterUser = require('../routes/pedido-router-user');
 const utilRouter = require('../routes/util-router');
+const ligardesligarRouter = require('../routes/ligardesligar-router');
 
 
 
@@ -30,6 +31,8 @@ app.use('/api/usuario', usuarioRouter);
 app.use('/api/pedido', pedidoRouter);
 app.use('/api/pedidoUser', pedidoRouterUser);
 app.use('/api/util', utilRouter);
+app.use('/api/ligardesligar', ligardesligarRouter);
+
 
 
 
