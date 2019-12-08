@@ -15,6 +15,8 @@ const pedidoModel = new schema({
     nomeUser: { type: String, trim: true },
     produtos: { type: String, trim: true },
     quantidade: { type: String, trim: true },
+    deliveryApp: { type: String, trim: true },
+
     
 });
 

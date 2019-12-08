@@ -7,7 +7,7 @@ const utilModel = new schema({
     usuarioId: { type: schema.Types.ObjectId, ref: 'Usuario' },
     // valorTotal: { type: Number, required: true, default: 0 },
      comentIntro: { type: String, required: true },
-    // comentario: { type: String, trim: true },
+     deliveryApp: { type: String, trim: true },
     // onesignalId: { type: String, trim: true },
     // formaPagamento: { type: String, trim: true},
     // comentarioPagamento: {type: String, trim: true},
