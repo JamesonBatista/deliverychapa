@@ -14,7 +14,9 @@ utilController.prototype.post = async (req, res) => {
     let _validationContract = new validation();
     _validationContract.isRequired(req.body.taxaEntrega, 'Taxa Entrega');
      _validationContract.isRequired(req.body.comentIntro, 'Comentário introdução');
-     _validationContract.isRequired(req.body.deliveryApp, 'Método de entrega');
+     _validationContract.isValid(req.body.deliveryApp, 'Método de entrega');
+    _validationContract.isValid(req.body.msgonOff, 'Informe sua mensagem de ONLINE/OFFLINE');
+
     // _validationContract.isRequired(req.body.produtos, 'Informe o produto');
     // _validationContract.isRequired(req.body.quantidade, 'Informe a quantidade');
     // _validationContract.isValid(req.body.onesignalId, 'O oneSignal é obrigatório'
@@ -40,8 +42,8 @@ utilController.prototype.put = async (req, res) => {
 
     _validationContract.isRequired(req.body.taxaEntrega, 'Informe sua taxa');
     _validationContract.isRequired(req.body.comentIntro, 'Comentário introdução');
-     _validationContract.isRequired(req.body.deliveryApp, 'Método de entrega');
-    // _validationContract.isEmail(req.body.email, 'O e-mail informado é inválido');
+     _validationContract.isValid(req.body.deliveryApp, 'Método de entrega');
+    _validationContract.isValid(req.body.msgonOff, 'Informe sua mensagem de ONLINE/OFFLINE');
     // _validationContract.isRequired(req.body.adress, 'Informe seu Endereço completo!');
     // _validationContract.isRequired(req.body.bairr, 'Informe seu Bairro!');
     // _validationContract.isRequired(req.body.city, 'Informe sua Cidade!');

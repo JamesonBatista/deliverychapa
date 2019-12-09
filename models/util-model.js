@@ -8,6 +8,7 @@ const utilModel = new schema({
     // valorTotal: { type: Number, required: true, default: 0 },
      comentIntro: { type: String, required: true },
      deliveryApp: { type: String, trim: true },
+     msgonOff: { type: String, trim: true },
     // onesignalId: { type: String, trim: true },
     // formaPagamento: { type: String, trim: true},
     // comentarioPagamento: {type: String, trim: true},
