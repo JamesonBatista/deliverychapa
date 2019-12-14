@@ -20,7 +20,7 @@ class pedidoRepositoryUser {
     }
     
     async getById(id) {
-        return await this._base.getById(id);
+        return await this._base.getById(id, 'valorTotal _id dataPedido');
     }
 
     async delete(id) {

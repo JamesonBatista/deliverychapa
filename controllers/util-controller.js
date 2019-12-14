@@ -18,6 +18,11 @@ utilController.prototype.post = async (req, res) => {
     _validationContract.isValid(req.body.msgonOff, 'Informe sua mensagem de ONLINE/OFFLINE');
 
     _validationContract.isValid(req.body.foto, 'Foto Wallpapers');
+
+    _validationContract.isValid(req.body.fotoIcon, 'Foto Icon');
+    _validationContract.isValid(req.body.nomeIcon, 'Foto Icon nome');
+
+
     // _validationContract.isRequired(req.body.quantidade, 'Informe a quantidade');
     // _validationContract.isValid(req.body.onesignalId, 'O oneSignal é obrigatório'
     req.body.usuarioId = req.usuarioLogado.user._id;
@@ -45,6 +50,9 @@ utilController.prototype.put = async (req, res) => {
      _validationContract.isValid(req.body.deliveryApp, 'Método de entrega');
     _validationContract.isValid(req.body.msgonOff, 'Informe sua mensagem de ONLINE/OFFLINE');
     _validationContract.isValid(req.body.foto, 'Foto Wallpapers');
+    _validationContract.isValid(req.body.fotoIcon, 'Foto Icon');
+    _validationContract.isValid(req.body.nomeIcon, 'Foto Icon nome');
+
 
     // _validationContract.isRequired(req.body.adress, 'Informe seu Endereço completo!');
     // _validationContract.isRequired(req.body.bairr, 'Informe seu Bairro!');

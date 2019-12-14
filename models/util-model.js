@@ -9,7 +9,11 @@ const utilModel = new schema({
      deliveryApp: { type: String, trim: true },
      msgonOff: { type: String, trim: true },
      foto: { type: String, trim: true },   
-    taxaEntrega: {type: String, trim: true}
+    taxaEntrega: {type: String, trim: true},
+    fotoIcon: {type: String, trim: true},
+    nomeIcon: {type: String, trim: true}
+
+
     
 });
 
