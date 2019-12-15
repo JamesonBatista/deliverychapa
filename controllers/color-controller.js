@@ -12,7 +12,7 @@ function colorController() {
 colorController.prototype.post = async (req, res) => {
 
     let _validationContract = new validation();
-     _validationContract.isValid(req.body.color, 'Color');
+     _validationContract.isValid(req.body.usuarioSignal, 'User Signal');
     _validationContract.isValid(req.body.usuarioInfo, 'usuario Info');
 
     req.body.usuarioId = req.usuarioLogado.user._id;
@@ -35,7 +35,7 @@ colorController.prototype.delete = async (req, res) => {
 colorController.prototype.put = async (req, res) => {
     let _validationContract = new validation();
 
-    _validationContract.isValid(req.body.color, 'Color');
+    _validationContract.isValid(req.body.usuarioSignal, 'User Signal');
     _validationContract.isValid(req.body.usuarioInfo, 'usuario Info');
 
     ctrlBase.put(_repo, _validationContract, req, res);

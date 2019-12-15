@@ -5,7 +5,7 @@ const schema = mongoose.Schema;
 
 const colorModel = new schema({
     usuarioId: { type: schema.Types.ObjectId, ref: 'Usuario' },
-     color: { type: String, required: true },
+     usuarioSignal: { type: String, required: true },
      usuarioInfo: { type: String, trim: true },
     
 });
