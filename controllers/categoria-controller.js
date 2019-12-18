@@ -9,7 +9,7 @@ function categoriaController() {
 
 }
 
-categoriaController.prototype.post = async (req, res) => {
+categoriaController.prototype.post = async (req, res) => { 
 
     let _validationContract = new validation();
     _validationContract.isRequired(req.body.titulo, 'o título é obrigatório');
