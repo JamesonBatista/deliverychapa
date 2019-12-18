@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Notificações</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label >Texto da Notificação</ion-label>
+<ion-item>
+  <ion-input type="text" placeholder="Digite o texto" [(ngModel)]="user" ></ion-input>
+</ion-item>
+<div class="bottom">
+<button ion-button clear float-right (click)="userFull()">Enviar
+<ion-icon name="paper-plane"></ion-icon>
+</button>
+</div>
+
+
+
+</ion-content>

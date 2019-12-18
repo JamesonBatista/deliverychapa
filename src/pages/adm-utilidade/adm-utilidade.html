@@ -1,0 +1,79 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Configurações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<div>
+  <ion-label>Taxa de Entrega:
+    <ion-icon name="bicycle"></ion-icon>
+  </ion-label>
+    <input type="text" placeholder="Valor   Taxa: " [(ngModel)]="taxa" class="text">
+</div>
+
+<div>
+  <ion-label>Texto de Introdução:
+    <ion-icon name="clipboard"></ion-icon>
+  </ion-label>
+      <input type="text" placeholder="Texto Login: " [(ngModel)]="comentIntro" class="text">
+</div>
+
+<div>
+  <ion-label>Texto de ONLINE/OFFINE:
+<ion-icon name="power"></ion-icon>
+  </ion-label>
+  <input type="text" placeholder="Texto ONLINE/OFFLINE: " [(ngModel)]="msgonOff"  class="text" text-wrap>
+</div>
+
+
+<ion-label class="wallpapers">Wallpaper
+      <ion-icon name="camera"></ion-icon>
+</ion-label>
+
+<ion-item *ngIf="foto">
+  <img src="{{foto}}">
+</ion-item>
+<ion-item text-center>
+  <button ion-button (click)="getPictureOption()">
+    <ion-icon name="camera" item-left></ion-icon>
+    Selecionar Foto
+  </button>
+</ion-item>
+<ion-label class="wallpapers"> Icon 2400x2400</ion-label>
+<ion-item *ngIf="fotoIcon">
+  <img src="{{fotoIcon}}">
+</ion-item>
+<div>
+  <ion-label>Texto de Introdução:
+    <ion-icon name="camera"></ion-icon>
+  </ion-label>
+  <input type="text" placeholder="Nome do Icon: " [(ngModel)]="nomeIcon" class="text">
+</div>
+<ion-item text-center>
+  <button ion-button (click)="getPictureOptionIcon()">
+    <ion-icon name="camera" item-left></ion-icon>
+    Selecionar Icone
+  </button>
+</ion-item>
+
+<div class="botton">
+  <button ion-button block  (click)="taxaUpdate()">Atualizar</button>
+</div>
+
+<div class="bottomleft" >
+  <ion-label> Ligar</ion-label>
+  <button ion-button (click)="ligarOnline()" class="ligar">
+    <ion-icon name="power" color="writhe"></ion-icon>
+  </button>
+  <ion-label> Desligar</ion-label>
+  <button ion-button (click)="ligarOffline()">
+    <ion-icon name="power" color="writhe"></ion-icon>
+  </button>
+</div>
+
+</ion-content>

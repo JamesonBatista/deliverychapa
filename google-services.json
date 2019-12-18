@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "770150110895",
+    "firebase_url": "https://onesignalpush-10f9b.firebaseio.com",
+    "project_id": "onesignalpush-10f9b",
+    "storage_bucket": "onesignalpush-10f9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770150110895:android:28b382f2e2a39f06f7e65a",
+        "android_client_info": {
+          "package_name": "nofood.push.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770150110895-gnf4abind1m3c0lvt2sob5b9ivqfhrut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9991a7Nmk5gh4MFDrGXB8GOLBjIfeMdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770150110895-gnf4abind1m3c0lvt2sob5b9ivqfhrut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

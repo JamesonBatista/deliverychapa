@@ -1,0 +1,35 @@
+page-adm-utilidade {
+
+  .ligar{
+background-color: green;
+  }
+  .label {
+    margin: 13px 8px 13px 0;
+    font-size: 1.8rem;
+}
+ion-app.md {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 1.6rem;
+    background-color: #E91E63;
+}
+input.ng-pristine.ng-valid.ng-touched {
+    font-size: 1.8rem;
+}
+input.ng-untouched.ng-pristine.ng-valid {
+    font-size: 1.6rem;
+}
+.text{
+    font-size: 1.6rem;
+    width: 100%;
+    border-inline-end: inherit;
+  }
+  .label {
+    margin: 13px 8px 13px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.wallpapers{
+  text-align: center;
+}
+
+}
