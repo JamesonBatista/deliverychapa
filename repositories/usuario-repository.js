@@ -29,9 +29,9 @@ class usuarioRepository {
                 email: data.email,
                 foto: data.foto,
                 telefone: data.telefone,
-                endereco: data.adress,
-                Bairro: data.bairr,
-                Cidade: data.city,
+                adress: data.adress,
+                bairr: data.bairr,
+                city: data.city,
             });
         return this._base._model.findById(usuarioAtualizado._id, this._projection)
     }
