@@ -12,6 +12,8 @@ const pedidoRouterUser = require('../routes/pedido-router-user');
 const utilRouter = require('../routes/util-router');
 const ligardesligarRouter = require('../routes/ligardesligar-router');
 const colorRouter = require('../routes/color-router');
+const feedbackRouter = require('../routes/feedback-router');
+
 
 
 
@@ -35,6 +37,8 @@ app.use('/api/pedidoUser', pedidoRouterUser);
 app.use('/api/util', utilRouter);
 app.use('/api/ligardesligar', ligardesligarRouter);
 app.use('/api/color', colorRouter);
+app.use('/api/feedback', feedbackRouter);
+
 
 
 
