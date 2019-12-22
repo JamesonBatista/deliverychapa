@@ -20,6 +20,9 @@ pedidoController.prototype.post = async (req, res) => {
     _validationContract.isValid(req.body.onesignalId, 'O oneSignal é obrigatório');
     _validationContract.isValid(req.body.deliveryApp, 'O Modo de entrega é obrigatório');
     _validationContract.isValid(req.body.color, 'color');
+    _validationContract.isRequired(req.body.identification, 'Informe a quantidade');
+
+    
 
     req.body.usuarioId = req.usuarioLogado.user._id;
     ctrlBase.post(_repo, _validationContract, req, res);
