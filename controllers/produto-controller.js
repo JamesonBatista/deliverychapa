@@ -32,8 +32,8 @@ produtoController.prototype.put = async (req, res) => {
     _validationContract.isRequired(req.body.foto, 'A foto do produto é obrigatoria');
     _validationContract.isRequired(req.body.preco, 'O preço do produto é obrigatorio');
     _validationContract.isRequired(req.body.categoriaId, 'Informe a categoria que o produto está');
-    _validationContract.isRequired(req.body.produtos, 'Informe o produto');
-    _validationContract.isRequired(req.body.quantidade, 'Informe a quantidade');
+    _validationContract.isValid(req.body.produtos, 'Informe o produto');
+    _validationContract.isValid(req.body.quantidade, 'Informe a quantidade');
 
 
 
