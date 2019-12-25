@@ -20,6 +20,8 @@ pedidoControllerUser.prototype.post = async (req, res) => {
     _validationContract.isValid(req.body.onesignalId, 'O oneSignal é obrigatório');
     _validationContract.isValid(req.body.deliveryApp, 'O Modo de entrega é obrigatório');
     _validationContract.isValid(req.body.color, 'color');
+    _validationContract.isRequired(req.body.identification, 'Informe a quantidade');
+
 
 
 
@@ -34,13 +36,7 @@ pedidoControllerUser.prototype.post = async (req, res) => {
 pedidoControllerUser.prototype.put = async (req, res) => {
     let _validationContract = new validation();
 
-    // _validationContract.isRequired(req.body.itens, 'Informe os itens do seu pedido');
-    // _validationContract.isRequired(req.body.valorTotal, 'O valor Total é obrigatório');
-    // _validationContract.isRequired(req.body.nomeUser, 'O nome do Usuario é obrigatório');
-    // _validationContract.isRequired(req.body.produtos, 'Informe o produto');
-    // _validationContract.isRequired(req.body.quantidade, 'Informe a quantidade');
-    // _validationContract.isValid(req.body.onesignalId, 'O oneSignal é obrigatório');
-    // _validationContract.isValid(req.body.deliveryApp, 'O Modo de entrega é obrigatório');
+   
     _validationContract.isValid(req.body.color, 'color');
 
 

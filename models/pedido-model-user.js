@@ -17,6 +17,8 @@ const pedidoModelUser = new schema({
     quantidade: { type: String, trim: true },
     deliveryApp: { type: String, trim: true },
     color: { type: Boolean, trim: true },
+    identification: { type: String, trim: true },
+
 
 
    
